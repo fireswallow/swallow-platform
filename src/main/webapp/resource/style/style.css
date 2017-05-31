@@ -1,0 +1,12 @@
+h1 {
+    color: red;
+}
+
+h2 {
+    color: crimson;
+}
+
+.static {
+    color: aqua;
+    border: 1px solid crimson;
+}

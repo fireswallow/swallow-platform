@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="base::heads(~{::title},~{::link},~{})">
+    <title>User List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/resource/style/style.css}"/>
+</head>
+<body>
+<h1>用户列表</h1>
+<h2>张三</h2>
+<h2>李四</h2>
+<h3 th:text="${name}"></h3>
+
+
+<div th:replace="base::foots(~{::script})">
+    <script th:src="@{/resource/scripts/script2.js}"></script>
+</div>
+</body>
+</html>
