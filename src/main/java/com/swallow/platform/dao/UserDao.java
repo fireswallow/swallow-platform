@@ -10,5 +10,11 @@ import java.util.Map;
  */
 @Repository
 public interface UserDao {
-    public List<Map<String, Object>> userListCC(Map<String, Object> param);
+    public int insertUserComplete(Map<String, Object> param);
+
+    public int insertUserSimple(Map<String, Object> param);
+
+    public int updateUser(Map<String, Object> param);
+
+    public List<Map<String, Object>> queryUserList(Map<String, Object> param);
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swallow.platform.dao.UserDao">
+
+    <insert id="insertUserComplete" parameterType="java.util.Map">
+        INSERT INTO tb_user (
+            user_id, name, card_id, password, age, create_time
+        ) VALUES (
+            #{userId},
+            #{name},
+            #{cardId},
+            #{password},
+            #{age},
+            #{createTime}
+        )
+    </insert>
+
+    <insert id="insertUserSimple" parameterType="java.util.Map">
+        INSERT INTO tb_user (
+            user_id, name, card_id, password
+        ) VALUES (
+            #{userId},
+            #{name},
+            #{cardId},
+            #{password}
+        )
+    </insert>
+
+    <update id="updateUser" parameterType="java.util.Map">
+        UPDATE tb_user
+        SET name     = #{name},
+            card_id  = #{cardId},
+            password = #{password},
+            age      = #{age}
+        WHERE user_id = #{userId}
+    </update>
+
+    <select id="queryUserList" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT *
+        FROM tb_user
+    </select>
+</mapper>

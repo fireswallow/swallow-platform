@@ -1,7 +1,6 @@
 package com.swallow.platform;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import org.apache.ibatis.plugin.Interceptor;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.*;
@@ -62,7 +61,10 @@ public class AppConfiguration {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
         configuration.setCallSettersOnNulls(true);
+        sqlSessionFactoryBean.setConfiguration(configuration);
         sqlSessionFactoryBean.setDataSource(dataSource());
+
         return sqlSessionFactoryBean;
     }
+
 }
