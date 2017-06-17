@@ -20,7 +20,7 @@ import java.util.Properties;
 @ComponentScan(basePackages = "com.swallow.platform",
         excludeFilters = {@ComponentScan.Filter(type = FilterType.ASPECTJ, pattern = "com.swallow.platform.web..*")})
 @EnableTransactionManagement
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy(proxyTargetClass = true)
 @MapperScan("com.swallow.platform.dao")
 public class AppConfiguration {
 
