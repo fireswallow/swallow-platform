@@ -10,6 +10,7 @@
 <body>
 
 <div th:fragment="foots(scripts)" th:remove="tag">
+    <script th:src="@{/resource/jquery-3.2.1/jquery-3.2.1.min.js}"></script>
     <script th:src="@{/resource/scripts/script1.js}"></script>
     <th:block th:replace="${scripts}"/>
 </div>

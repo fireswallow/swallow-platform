@@ -10,9 +10,12 @@
 <h2>李四</h2>
 <h3 th:text="${name}"></h3>
 
+<button type="button" id="ajax">Ajax Send</button>
+
 
 <div th:replace="base::foots(~{::script})">
     <script th:src="@{/resource/scripts/script2.js}"></script>
+    <script th:src="@{/resource/scripts/userList.js}"></script>
 </div>
 </body>
 </html>
